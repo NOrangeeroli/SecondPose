@@ -27,7 +27,7 @@ loss:
   s_weight: 1.0
 
 train_dataset:
-  data_dir: ../../../data/NOCS
+  data_dir: ../../data/NOCS
   sample_num: 2048
   random_rotate: True
   angle_range: 20

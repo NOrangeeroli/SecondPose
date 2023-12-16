@@ -17,6 +17,20 @@ Other dependencies:
 requirements.txt
 ```
 
+Setup env:
+
+```
+conda create -n secondpose python=3.9
+pip install torch==1.13.0+cu116 torchvision==0.14.0+cu116 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu116
+cd lib/pointnet2/
+pip install .
+cd ../sphericalmap_utils/
+pip install .
+cd ../../
+pip install -r requirements.txt
+pip install open3d
+```
+
 ## Data Processing
 
 1. Please refer to the work of [Self-DPDN](https://github.com/JiehongLin/Self-DPDN).

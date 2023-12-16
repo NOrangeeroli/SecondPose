@@ -108,7 +108,6 @@ pyparsing==3.1.1
 pyre-extensions==0.0.23
 PySocks==1.7.1
 pytest==7.4.2
-pytorch-lightning==1.4.2
 pytz==2023.3.post1
 pyvista==0.42.2
 PyWavelets==1.4.1
@@ -144,11 +143,6 @@ timm==0.6.11
 tokenizers==0.13.3
 toml==0.10.2
 tomli==2.0.1
-torch==1.13.1+cu116
-torch-tensorrt==1.3.0
-torchaudio==0.13.1+cu116
-torchmetrics==0.6.0
-torchvision==0.14.1+cu116
 tqdm==4.66.1
 transformers==4.26.1
 triton==2.0.0

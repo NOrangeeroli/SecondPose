@@ -1,4 +1,4 @@
-# VI-Net
+# SecondPose
 
 Code for "SecondPose: SE(3)-Consistent Dual-Stream Feature Fusion for Category-Level Pose Estimation", Preprint. [[Arxiv](https://arxiv.org/abs/2311.11125)]
 

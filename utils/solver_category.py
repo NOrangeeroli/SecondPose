@@ -176,13 +176,13 @@ class Solver(gorilla.solver.BaseSolver):
             assert False
 
 
-def test_func(ts_model, r_model, sim_model, dataloder, refs, save_path):
+def test_func(ts_model, r_model, dataloder, save_path):
     ts_model.eval()
     r_model.eval()
-    ref_feature = refs[:,2:].cuda()
-    ref_index = refs[:,0].cuda()
-    ref_cls = refs[:,1].cuda()
-    ref_feature_norm = ref_feature/ref_feature.norm(dim=1)[:,None]
+    #ref_feature = refs[:,2:].cuda()
+    #ref_index = refs[:,0].cuda()
+    #ref_cls = refs[:,1].cuda()
+    #ref_feature_norm = ref_feature/ref_feature.norm(dim=1)[:,None]
 
     with tqdm(total=len(dataloder)) as t:
         for i, data in enumerate(dataloder):

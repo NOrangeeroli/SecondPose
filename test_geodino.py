@@ -82,7 +82,6 @@ if __name__ == "__main__":
     from VI_Net_geodino import Net
     r_model = Net(cfg.resolution, cfg.ds_rate)
     
-    sim_model = r_model
     if len(cfg.gpus)>1:
         ts_model = torch.nn.DataParallel(ts_model, range(len(cfg.gpus.split(","))))
         r_model = torch.nn.DataParallel(r_model, range(len(cfg.gpus.split(","))))
@@ -103,13 +102,13 @@ if __name__ == "__main__":
     # logger.info("=> loading SIM-Net checkpoint from path: {} ...".format(checkpoint))
     # gorilla.solver.load_checkpoint(model=sim_model, filename=checkpoint)
 
-    feature_file = os.path.join(BASE_DIR, cfg.feature.feature_path, cfg.feature.ref_feature_file)#.replace('.','_' + str(cfg.test_epoch) + '.'))
+    #feature_file = os.path.join(BASE_DIR, cfg.feature.feature_path, cfg.feature.ref_feature_file)#.replace('.','_' + str(cfg.test_epoch) + '.'))
     
-    with open(feature_file, 'rb') as f:
+    #with open(feature_file, 'rb') as f:
         
-        ref_feature= np.load(f, allow_pickle=True)
+    #    ref_feature= np.load(f, allow_pickle=True)
         
-    ref_feature = torch.FloatTensor(ref_feature)
+    #ref_feature = torch.FloatTensor(ref_feature)
     
     # train_dataset  = TrainingDataset(
     #     cfg.train_dataset,
@@ -143,5 +142,5 @@ if __name__ == "__main__":
 
     if not os.path.isdir(save_path):
         os.makedirs(save_path)
-        test_func(ts_model, r_model, sim_model, dataloder,ref_feature, save_path)
+        test_func(ts_model, r_model, dataloder, save_path)
     evaluate(save_path, logger)

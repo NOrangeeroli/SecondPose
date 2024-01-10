@@ -58,7 +58,7 @@ python train.py --gpus 0  --mod ts
 To test the model, please run:
 
 ```
-python test_geodino.py --gpus 0 
+python test_geodino.py --gpus 0 --test_epoch [YOUR EPOCH]
 ```
 
 ## Acknowledgements

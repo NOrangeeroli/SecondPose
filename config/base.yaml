@@ -43,8 +43,5 @@ test:
   sample_num: 2048
   data_dir: ../../data/NOCS
 
-feature:
-  feature_path: save_feature
-  ref_feature_file: reference_feature.npy
 per_val: 10
 per_write: 50

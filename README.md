@@ -61,6 +61,10 @@ To test the model, please run:
 python test_geodino.py --gpus 0 --test_epoch [YOUR EPOCH]
 ```
 
+## Model Checkpoints
+
+https://drive.google.com/file/d/1IafKC84XstivhUkm-4rF15KsSHaeBbic/view?usp=sharing
+
 ## Acknowledgements
 
 Our implementation leverages the code from [VI-Net](https://github.com/JiehongLin/VI-Net), 
